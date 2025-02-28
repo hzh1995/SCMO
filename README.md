@@ -10,7 +10,7 @@ In this work, we integrated the Ecotyper algorithm with the Siamese Neural Netwo
 
 ## Step1 Discovery of Cell States and Ecotypes in scRNA-seq CRC Data
 The configuration file we used is referenced at
-/Ecotyper/Ecotyper/Cell_type_specific_genes/DiscoveryOutput_CRC_sample_detaild_annotation/config_used.yml
+/Ecotyper/config_used.yml
 ```
 Rscript EcoTyper_discovery_bulk.R -c config_discovery_scRNA.yml
 ```

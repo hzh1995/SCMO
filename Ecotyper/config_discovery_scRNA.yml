@@ -1,0 +1,38 @@
+default :
+  Input :    
+    Discovery dataset name : "DiscoveryOutput_CRC_sample_detaild_annotation"
+    Expression matrix : "/storage/hzh/SC_CRC/CRC_sample/scRNA_object_sample_new.txt"    
+    Annotation file : "/storage/hzh/SC_CRC/CRC_sample/scRNA_object_sample_new_Annotation.txt" 
+    Annotation file column to scale by : NULL
+    Annotation file column(s) to plot : []
+    
+  Output :
+    Output folder : "/storage/hzh/ecotyper-master/DiscoveryOutput_CRC_sample_detaild_annotationcutoff0.95_p0.001"
+
+  Pipeline settings :
+    #Pipeline steps:
+    #   step 1 (extract cell type specific genes)
+    #   step 2 (cell state discovery on correrlation matrices)
+    #   step 3 (choosing the number of cell states)
+    #   step 4 (extracting cell state information)
+    #   step 5 (cell state re-discovery in expression matrices)
+    #   step 6 (extracting information for re-discovered cell states)
+    #   step 7 (cell state QC filter)
+    #   step 8 (ecotype discovery)
+    Pipeline steps to skip : [1,2,3,4,5,6,7] 
+    # Accepted values: 
+    # "cell type specific" - select genes overexpressed in a cell type
+    # "no filter" - use all genes
+    # <integer> - e.g. 1000, select top <integer> genes with highest variance in a cell type
+    Filter genes : "cell type specific"
+    Number of threads : 140
+    Number of NMF restarts : 50
+    Maximum number of states per cell type : 50
+    Cophenetic coefficient cutoff : 0.95
+    #The p-value cutoff used for filtering non-significant overlaps in the jaccard matrix used for 
+    #discovering ecotypes in step 8. Default: 1 (no filtering).
+    Jaccard matrix p-value cutoff : 0.001
+    Minimum number of states in ecotypes : 3    
+
+
+

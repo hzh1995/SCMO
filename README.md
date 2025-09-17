@@ -7,7 +7,7 @@ In this work, we integrated the Ecotyper algorithm with the Siamese Neural Netwo
 
 
 ## Step1 Discovery of Cell States and Ecotypes in scRNA-seq CRC Data
-In this step of the analysis, single-cell data derived from Colorectal Cancer (CRC) was utilized as a reference. This allowed us to discover ecotypes and cell states that are specifically associated with the tumor microenvironment in CRC.The single-cell expression matrix and annotation file, scRNA_object_sample_new.txt and scRNA_object_sample_new_Annotation.txt, can be downloaded and used from https://zenodo.org/records/17078320.
+In this step of the analysis, single-cell data derived from Colorectal Cancer (CRC) was utilized as a reference. This allowed us to discover ecotypes and cell states that are specifically associated with the tumor microenvironment in CRC.The single-cell expression matrix and annotation file, ```scRNA_object_sample_new.txt``` and ```scRNA_object_sample_new_Annotation.txt```, can be downloaded and used from https://zenodo.org/records/17078320.
 
 The script that does cell type and ecotype discovery is:
 ```
@@ -21,7 +21,7 @@ Rscript EcoTyper_discovery_bulk.R -c config_discovery_scRNA.yml
 ##                         Path to the config files [required].
 ##   -h, --help            Print help message.
 ```
-This script takes as input file a configuration file in YAML format. The configuration file for this step can be referenced  in :config_discovery_scRNA.yml
+This script takes as input file a configuration file in YAML format. The configuration file for this step can be referenced  in :```config_discovery_scRNA.yml```
 ```
 default :
   Input :    

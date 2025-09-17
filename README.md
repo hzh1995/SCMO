@@ -58,8 +58,6 @@ default :
     Jaccard matrix p-value cutoff : 0.001
     Minimum number of states in ecotypes : 3
 ```
-Due to file size limitations, the two files scRNA_object_sample_new.txt and scRNA_object_sample_new_Annotation.txt could not be uploaded.
-
 **Input**
 
 **Discovery dataset name**
